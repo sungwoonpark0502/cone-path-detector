@@ -23,8 +23,8 @@ The project began with the implementation of image processing techniques to dete
 ### Solutions Implemented
 - **Refining Color Thresholds**: Adjusted the HSV ranges to better accommodate varying lighting conditions, which stabilized cone detection accuracy.
 - **Advanced Contour Filtering**: Implemented area-based filtering of contours to ignore small detections that could lead to errors in line fitting.
-- **Robust Line Fitting with RANSAC**: Employed RANSACRegressor to fit lines, which is less sensitive to outliers. This approach helped in generating straighter lines.
-- **Centroid Adjustment**: Before fitting the lines, the center of the detected cones were adjusted slightly outward (left or right depending on the side). This ensured that the fitted lines did not overlap with the cones and provided a clearer path.
+- **Robust Line Fitting with RANSAC**: Employed RANSACRegressor to fit lines, which is less sensitive to outliers. This approach helped to generate straighter lines.
+- **Centroid Adjustment**: Before fitting the lines, the center of the detected cones was adjusted slightly outward (left or right depending on the side). This ensured that the fitted lines did not overlap with the cones and provided a clearer path.
 
 ## How It Was Coded
 
@@ -41,7 +41,7 @@ The project began with the implementation of image processing techniques to dete
 
 4. **Adjusting Centroids**: The centroids are slightly shifted outward (by a `shift_amount`) to avoid the fitted lines intersecting the cones. Left centroids are shifted left, and right centroids are shifted right.
 
-5. **Fitting Boundary Lines**: Using the adjusted centroids, boundary lines are fitted with `RANSACRegressor` from scikit-learn:
+5. **Fitting Boundary Lines**: Using the adjusted centroids, boundary lines are fitted with `RANSACRegressor` from sci-kit-learn:
    - The `RANSACRegressor` is used to fit robust linear models to the left and right cone centroids. The model is fine-tuned using a `residual_threshold` to reduce the impact of outliers on line fitting.
 
 6. **Drawing Boundary Lines**: In the `draw_boundary_lines()` function:
@@ -53,5 +53,8 @@ The project began with the implementation of image processing techniques to dete
    - The final result, with boundary lines drawn, is saved as a new image using `cv2.imwrite()`.
 
 
-## Outcomes and Improvements
-The adjustments led to a more reliable detection of cones and the fitting of more accurate boundary lines. Future improvements could include implementing dynamic threshold adjustments based on real-time feedback from the environment, enhancing the system’s adaptability.
+## Outcomes and Future Improvements
+The implemented adjustments significantly improved the reliability of cone detection and resulted in more precise boundary line fitting. The use of refined color thresholds and robust line-fitting methods ensured better adaptability to varying conditions. 
+
+Looking ahead, further enhancements could involve integrating dynamic thresholding that adjusts in real-time based on environmental feedback, such as lighting conditions or cone positioning. This would make the system even more adaptable to diverse scenarios, further improving performance in complex or changing environments.
+
