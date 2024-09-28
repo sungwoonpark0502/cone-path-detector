@@ -20,8 +20,9 @@ The project began with the implementation of image processing techniques to dete
 - **Centroid Adjustment**: Before fitting the lines, the centroids of the detected cones were adjusted slightly outward (left or right depending on the side). This ensured that the fitted lines did not overlap with the cones and provided a clearer path.
 
 ### Result
-Original Image            |  sample answer.png
+Original Image            |  Result Image
 :-------------------------:|:-------------------------:
 ![](https://github.com/sungwoonpark0502/cone-path-detector/blob/master/original.png)  |  ![](https://github.com/sungwoonpark0502/cone-path-detector/blob/master/answer.png)
+
 ## Outcomes and Improvements
 The adjustments led to a more reliable detection of cones and the fitting of more accurate boundary lines. Future improvements could include implementing dynamic threshold adjustments based on real-time feedback from the environment, enhancing the system’s adaptability.
