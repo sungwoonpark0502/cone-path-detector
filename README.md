@@ -1,3 +1,5 @@
+# Wisconsin Autonomous
+
 ## Project Overview
 This project is focused on detecting traffic cones in images and fitting boundary lines to demarcate the drivable path using OpenCV and scikit-learn. It demonstrates practical application of computer vision techniques in scenarios akin to autonomous vehicle navigation.
 
