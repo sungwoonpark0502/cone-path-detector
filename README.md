@@ -52,9 +52,3 @@ The project began with the implementation of image processing techniques to dete
    - The image is processed through the detection and line fitting functions.
    - The final result, with boundary lines drawn, is saved as a new image using `cv2.imwrite()`.
 
-
-## Outcomes and Future Improvements
-The implemented adjustments significantly improved the reliability of cone detection and resulted in more precise boundary line fitting. The use of refined color thresholds and robust line-fitting methods ensured better adaptability to varying conditions. 
-
-Looking ahead, further enhancements could involve integrating dynamic thresholding that adjusts in real-time based on environmental feedback, such as lighting conditions or cone positioning. This would make the system even more adaptable to diverse scenarios, further improving performance in complex or changing environments.
-
